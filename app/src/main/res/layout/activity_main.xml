@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <alireza.sn.paint.PaintView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_feature"/>
+
+    <LinearLayout
+        android:id="@+id/layout_feature"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:background="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3">
+
+        <Button
+            android:onClick="redClick"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@android:color/holo_red_light" />
+
+        <Button
+            android:onClick="brushClick"
+            android:layout_width="30dp"
+            android:layout_margin="40dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_brush"/>
+
+        <Button
+            android:onClick="eraserClick"
+            android:layout_margin="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_baseline_remove_circle_24"/>
+    </LinearLayout>
+
+</RelativeLayout>
